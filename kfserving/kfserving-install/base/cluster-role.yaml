@@ -26,6 +26,7 @@ rules:
   - serving.knative.dev
   resources:
   - services
+  - services/finalizers
   verbs:
   - get
   - list
@@ -66,6 +67,7 @@ rules:
   - serving.kubeflow.org
   resources:
   - inferenceservices
+  - inferenceservices/finalizers
   verbs:
   - get
   - list
@@ -135,6 +137,7 @@ rules:
   - ""
   resources:
   - services
+  - services/finalizers
   verbs:
   - get
   - list
