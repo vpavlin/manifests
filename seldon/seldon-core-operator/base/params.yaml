@@ -1,0 +1,13 @@
+varReference:
+- path: spec/commonName
+  kind: Certificate
+- path: spec/dnsNames
+  kind: Certificate
+- path: webhooks/clientConfig/service/namespace
+  kind: MutatingWebhookConfiguration
+- path: webhooks/clientConfig/service/namespace
+  kind: ValidatingWebhookConfiguration
+- path: metadata/annotations/cert-manager.io\/inject-ca-from
+  kind: MutatingWebhookConfiguration
+- path: metadata/annotations/cert-manager.io\/inject-ca-from
+  kind: ValidatingWebhookConfiguration
