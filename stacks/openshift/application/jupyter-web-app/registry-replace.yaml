@@ -1,0 +1,29 @@
+apiVersion: v1alpha1
+kind: RegistryReplace
+metadata:
+  name: myTransformer
+spec:
+  fieldSpecs:
+  - kind: Deployment
+    group: apps
+    version: v1
+    path: spec/template/spec/containers[]/image
+  - kind: ImageStream
+    group: image.openshift.io
+    version: v1
+    path: spec/tags[]/from/name
+  - kind: ImageStream
+    group: image.openshift.io
+    version: v1
+    path: spec/tags[]/annotations/openshift.io\/imported-from
+  - kind: ConfigMap
+    version: v1
+    path: data/image
+  - kind: ConfigMap
+    version: v1
+    path: data/someTextField
+  registries:
+  - src: quay.io
+    dest: private-registry.example.com
+  - src: docker.io
+    dest: private-registry.example.com
