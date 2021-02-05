@@ -34,6 +34,3 @@ images:
   newTag: v2.0.0
   newName: quay.io/kubeflow/jupyter-web-app
 
-transformers:
-- registry-replace.yaml
-

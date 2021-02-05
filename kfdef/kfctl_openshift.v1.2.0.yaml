@@ -97,7 +97,13 @@ spec:
         name: manifests
         path: stacks/openshift
     name: kubeflow-apps
+  global:
+    transformers:
+    - name: Registry Replace
+      repoRef:
+        name: manifests
+        path: transformers/registry-replace.yaml
   repos:
   - name: manifests
-    uri: https://github.com/kubeflow/manifests/archive/v1.2-branch.tar.gz
+    uri: https://github.com/vpavlin/manifests/archive/feature/registry-replace-plugin.tar.gz
   version: v1.2-branch

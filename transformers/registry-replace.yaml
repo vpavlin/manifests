@@ -22,8 +22,16 @@ spec:
   - kind: ConfigMap
     version: v1
     path: data/someTextField
+  - kind: Job
+    version: v1
+    group: batch
+    path: spec/template/spec/containers[]/image
   registries:
   - src: quay.io
     dest: private-registry.example.com
   - src: docker.io
     dest: private-registry.example.com
+  - src: gcr.io
+    dest: private-registry.example.com
+  imageListOutput:
+    file: /tmp/images2.yaml
